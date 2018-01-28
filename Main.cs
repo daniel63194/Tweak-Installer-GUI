@@ -46,6 +46,10 @@ namespace Tweak_Installer
                         {
                             debs.Add(i);
                         }
+                        foreach (string i2 in openFileDialog.FileNames)
+                        {
+                            textBox1.Text = i2;
+                                }
                         break;
                     }
             }
