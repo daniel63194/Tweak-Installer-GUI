@@ -49,6 +49,10 @@
             this.github = new System.Windows.Forms.LinkLabel();
             this.autolabel = new System.Windows.Forms.Label();
             this.paypal = new System.Windows.Forms.LinkLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // install
@@ -58,7 +62,7 @@
             this.install.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.install.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold);
             this.install.ForeColor = System.Drawing.Color.Gainsboro;
-            this.install.Location = new System.Drawing.Point(12, 222);
+            this.install.Location = new System.Drawing.Point(11, 226);
             this.install.Name = "install";
             this.install.Size = new System.Drawing.Size(220, 75);
             this.install.TabIndex = 5;
@@ -73,7 +77,7 @@
             this.Uninstall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Uninstall.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold);
             this.Uninstall.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Uninstall.Location = new System.Drawing.Point(238, 222);
+            this.Uninstall.Location = new System.Drawing.Point(237, 226);
             this.Uninstall.Name = "Uninstall";
             this.Uninstall.Size = new System.Drawing.Size(220, 75);
             this.Uninstall.TabIndex = 6;
@@ -88,7 +92,7 @@
             this.host.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.host.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.host.ForeColor = System.Drawing.Color.White;
-            this.host.Location = new System.Drawing.Point(238, 23);
+            this.host.Location = new System.Drawing.Point(237, 21);
             this.host.Name = "host";
             this.host.Size = new System.Drawing.Size(200, 27);
             this.host.TabIndex = 0;
@@ -100,7 +104,7 @@
             this.pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass.ForeColor = System.Drawing.Color.White;
-            this.pass.Location = new System.Drawing.Point(238, 60);
+            this.pass.Location = new System.Drawing.Point(237, 58);
             this.pass.Name = "pass";
             this.pass.PasswordChar = '*';
             this.pass.Size = new System.Drawing.Size(200, 27);
@@ -112,7 +116,7 @@
             this.iplabel.AutoSize = true;
             this.iplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.iplabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iplabel.Location = new System.Drawing.Point(106, 21);
+            this.iplabel.Location = new System.Drawing.Point(105, 19);
             this.iplabel.Name = "iplabel";
             this.iplabel.Size = new System.Drawing.Size(126, 29);
             this.iplabel.TabIndex = 17;
@@ -123,7 +127,7 @@
             this.passwordlabel.AutoSize = true;
             this.passwordlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.passwordlabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.passwordlabel.Location = new System.Drawing.Point(46, 60);
+            this.passwordlabel.Location = new System.Drawing.Point(45, 58);
             this.passwordlabel.Name = "passwordlabel";
             this.passwordlabel.Size = new System.Drawing.Size(186, 29);
             this.passwordlabel.TabIndex = 18;
@@ -134,13 +138,13 @@
             this.select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.select.FlatAppearance.BorderSize = 0;
             this.select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.select.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.select.ForeColor = System.Drawing.Color.DimGray;
-            this.select.Location = new System.Drawing.Point(12, 165);
+            this.select.Location = new System.Drawing.Point(11, 169);
             this.select.Name = "select";
             this.select.Size = new System.Drawing.Size(446, 51);
             this.select.TabIndex = 4;
-            this.select.Text = "Select Debs, Zips and IPAs";
+            this.select.Text = "Select Debs, Zips and IPAs (or drag and drop)";
             this.select.UseVisualStyleBackColor = false;
             this.select.Click += new System.EventHandler(this.select_Click);
             // 
@@ -191,7 +195,7 @@
             this.auto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.auto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold);
             this.auto.ForeColor = System.Drawing.Color.White;
-            this.auto.Location = new System.Drawing.Point(59, 362);
+            this.auto.Location = new System.Drawing.Point(58, 376);
             this.auto.Name = "auto";
             this.auto.Size = new System.Drawing.Size(12, 11);
             this.auto.TabIndex = 9;
@@ -215,7 +219,7 @@
             this.version.AutoSize = true;
             this.version.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.version.ForeColor = System.Drawing.Color.DimGray;
-            this.version.Location = new System.Drawing.Point(9, 9);
+            this.version.Location = new System.Drawing.Point(8, 7);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(25, 13);
             this.version.TabIndex = 16;
@@ -280,9 +284,9 @@
             this.debslnk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.debslnk.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.debslnk.ForeColor = System.Drawing.Color.DimGray;
-            this.debslnk.Location = new System.Drawing.Point(15, 108);
+            this.debslnk.Location = new System.Drawing.Point(14, 127);
             this.debslnk.Name = "debslnk";
-            this.debslnk.Size = new System.Drawing.Size(446, 51);
+            this.debslnk.Size = new System.Drawing.Size(446, 36);
             this.debslnk.TabIndex = 3;
             this.debslnk.Text = "Get Debs";
             this.debslnk.UseVisualStyleBackColor = false;
@@ -306,7 +310,7 @@
             this.autolabel.AutoSize = true;
             this.autolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autolabel.ForeColor = System.Drawing.Color.DimGray;
-            this.autolabel.Location = new System.Drawing.Point(77, 353);
+            this.autolabel.Location = new System.Drawing.Point(76, 367);
             this.autolabel.Name = "autolabel";
             this.autolabel.Size = new System.Drawing.Size(312, 25);
             this.autolabel.TabIndex = 19;
@@ -326,6 +330,51 @@
             this.paypal.Text = "paypal";
             this.paypal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paypal_LinkClicked);
             // 
+            // panel1
+            // 
+            this.panel1.AllowDrop = true;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.autolabel);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.debslnk);
+            this.panel1.Controls.Add(this.version);
+            this.panel1.Controls.Add(this.select);
+            this.panel1.Controls.Add(this.passwordlabel);
+            this.panel1.Controls.Add(this.iplabel);
+            this.panel1.Controls.Add(this.auto);
+            this.panel1.Controls.Add(this.pass);
+            this.panel1.Controls.Add(this.host);
+            this.panel1.Controls.Add(this.Uninstall);
+            this.panel1.Controls.Add(this.install);
+            this.panel1.Location = new System.Drawing.Point(1, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(482, 458);
+            this.panel1.TabIndex = 20;
+            this.panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
+            this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(237, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 27);
+            this.textBox1.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(67, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 29);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "deb location:";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,31 +383,23 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 450);
             this.Controls.Add(this.paypal);
-            this.Controls.Add(this.autolabel);
             this.Controls.Add(this.github);
-            this.Controls.Add(this.debslnk);
             this.Controls.Add(this.ui);
             this.Controls.Add(this.creator);
             this.Controls.Add(this.reddit);
             this.Controls.Add(this.twitter);
-            this.Controls.Add(this.version);
             this.Controls.Add(this.error);
-            this.Controls.Add(this.auto);
             this.Controls.Add(this.uicache);
             this.Controls.Add(this.respring);
-            this.Controls.Add(this.select);
-            this.Controls.Add(this.passwordlabel);
-            this.Controls.Add(this.iplabel);
-            this.Controls.Add(this.pass);
-            this.Controls.Add(this.host);
-            this.Controls.Add(this.Uninstall);
-            this.Controls.Add(this.install);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "Main";
             this.ShowIcon = false;
             this.Text = "Tweak Installer";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,6 +428,9 @@
         private System.Windows.Forms.LinkLabel github;
         private System.Windows.Forms.Label autolabel;
         private System.Windows.Forms.LinkLabel paypal;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

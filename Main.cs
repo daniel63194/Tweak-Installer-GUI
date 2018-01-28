@@ -162,5 +162,21 @@ namespace Tweak_Installer
         {
             auto.Checked = !auto.Checked;
         }
+
+        private void panel1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
+        }
+
+        private void panel1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            foreach (string file in files)
+                textBox1.Text = file;
+            foreach (string file1 in files)
+                    debs.Add(file1);
+            
+            
+        }
     }
 }
